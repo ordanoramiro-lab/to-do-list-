@@ -1,14 +1,14 @@
-    
-    
-    const addTaskBtn = document.querySelector('#addTaskBtn');
-    const taskInput = document.querySelector('#taskInput');
-    const taskList = document.querySelector('#taskList');
 
-    addTaskBtn.addEventListener('click', addTask);
-    
-    function addTask() {
+
+const addTaskBtn = document.getElementById('addTaskButton');
+const taskInput = document.getElementById('taskInput');
+const taskList = document.getElementById('tasklist');
+
+addTaskBtn.addEventListener('click', addTask);
+
+
+function addTask() {
     const taskText = taskInput.value.trim();
-
     if(taskText === "") {
         alert("Please enter a task.");
         return;
