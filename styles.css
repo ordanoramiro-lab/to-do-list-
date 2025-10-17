@@ -79,3 +79,14 @@ h1 {
     background-color: #c82333;
 }
 
+.tickBtn {
+    background-color: green;
+}
+
+.tickBtn:hover {
+    background-color:aquamarine;
+}
+
+.tachar {
+text-decoration-line: line-through;
+}

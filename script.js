@@ -2,7 +2,10 @@ const addTaskBtn = document.getElementById('addTaskButton');
 const taskInput = document.getElementById('taskInput');
 const taskList = document.getElementById('tasklist');
 
-addTaskBtn.addEventListener('click', addTask);
+
+addTaskBtn.addEventListener('click', addTask)
+
+
 
 // addEventListener(EVENTO A ESUCHAR, FUNCION A EJECUTAR CUANDO FINALMENTE LO ESUCHA);
 
@@ -24,14 +27,22 @@ function addTask() {
     const deleteBtn = document.createElement("button");  // CREA boton de cruz 
     deleteBtn.textContent = "X";
     deleteBtn.classList.add("delete-btn");  // agrega la clase delete-btn al boton, esa clase esta en el styles.css y lo pone facha
-
     deleteBtn.addEventListener("click",  () => {
         li.remove(); 
     });
 
+    const tickBtn = document.createElement("button")
+    tickBtn.textContent = "✓";
+    tickBtn.classList.add("tickBtn");
+    tickBtn.addEventListener("click", () => {
+        span.classList.add("tachar");
+    });
+
     li.appendChild(span);
     li.appendChild(deleteBtn);
+    li.appendChild(tickBtn);
     taskList.appendChild(li);
 
     taskInput.value = "";
+
 }
